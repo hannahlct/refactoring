@@ -1,0 +1,7 @@
+ca50a43 Update README.md
+53aacd7 note regarding Task 1.2
+b00fa5b removed constant cents per dollar
+413548b updated pastoral and history
+2bef6a1 statementprinter + prev commmit
+ddae1f2 constants, performance and play checkstyle updated
+664b726 Initial commit
