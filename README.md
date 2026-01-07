@@ -1,4 +1,5 @@
-# Note: I forgot to complete Task 1.2 Git Log, instead reading over CheckStyle and committing my changes at a different pace.
+# Note on Task 1.2 & Git Log
+I forgot to complete Task 1.2 Git Log, instead reading over CheckStyle and committing my changes at a different pace. I was unsure on how to work "backwards" as the changes have already been committed, and I will update log.txt to the best of my ability now.
 
 
 # Refactoring Mini Assignment
