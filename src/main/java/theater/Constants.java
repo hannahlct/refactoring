@@ -4,7 +4,9 @@ package theater;
  * Constants used in this program.
  */
 public final class Constants {
-
+    // play type constants
+    public static final String TRAGEDY = "tragedy";
+    public static final String COMEDY = "comedy";
     // volume constants
     public static final int BASE_VOLUME_CREDIT_THRESHOLD = 30;
     public static final int COMEDY_EXTRA_VOLUME_FACTOR = 5;
@@ -25,6 +27,7 @@ public final class Constants {
     public static final int HISTORY_OVER_BASE_CAPACITY_PER_PERSON = 1000;
     public static final int HISTORY_AUDIENCE_THRESHOLD = 20;
     public static final int HISTORY_VOLUME_CREDIT_THRESHOLD = 20;
+    public static final int CENTS_PER_DOLLAR = 100;
     // pastoral constants
     public static final int PASTORAL_BASE_AMOUNT = 40000;
     public static final int PASTORAL_OVER_BASE_CAPACITY_PER_PERSON = 2500;
