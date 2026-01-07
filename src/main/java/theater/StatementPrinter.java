@@ -66,6 +66,23 @@ public class StatementPrinter {
                 }
                 result += Constants.COMEDY_AMOUNT_PER_AUDIENCE * performance.getAudience();
                 break;
+            case Constants.HISTORY:
+                result = Constants.HISTORY_BASE_AMOUNT;
+                if (performance.getAudience() > Constants.HISTORY_AUDIENCE_THRESHOLD) {
+                    result += Constants.HISTORY_OVER_BASE_CAPACITY_PER_PERSON
+                            * (performance.getAudience()
+                            - Constants.HISTORY_AUDIENCE_THRESHOLD);
+                }
+                break;
+
+            case Constants.PASTORAL:
+                result = Constants.PASTORAL_BASE_AMOUNT;
+                if (performance.getAudience() > Constants.PASTORAL_AUDIENCE_THRESHOLD) {
+                    result += Constants.PASTORAL_OVER_BASE_CAPACITY_PER_PERSON
+                            * (performance.getAudience()
+                            - Constants.PASTORAL_AUDIENCE_THRESHOLD);
+                }
+                break;
             default:
                 throw new IllegalArgumentException("unknown type: " + play.getType());
         }
@@ -74,12 +91,24 @@ public class StatementPrinter {
     }
 
     private int volumeCreditsFor(Performance performance) {
-        int result = Math.max(performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
+        final String type = playFor(performance).getType();
+        int result;
 
-        if (Constants.COMEDY.equals(playFor(performance).getType())) {
-            result += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
+        if (Constants.HISTORY.equals(type)) {
+            result = Math.max(performance.getAudience() - Constants.HISTORY_VOLUME_CREDIT_THRESHOLD, 0);
         }
+        else if (Constants.PASTORAL.equals(type)) {
+            result = Math.max(performance.getAudience() - Constants.PASTORAL_VOLUME_CREDIT_THRESHOLD, 0)
+                    + performance.getAudience() / 2;
+        }
+        else {
+            // existing behavior for tragedy/comedy
+            result = Math.max(performance.getAudience() - Constants.BASE_VOLUME_CREDIT_THRESHOLD, 0);
 
+            if (Constants.COMEDY.equals(type)) {
+                result += performance.getAudience() / Constants.COMEDY_EXTRA_VOLUME_FACTOR;
+            }
+        }
         return result;
     }
 

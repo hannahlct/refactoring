@@ -7,6 +7,8 @@ public final class Constants {
     // play type constants
     public static final String TRAGEDY = "tragedy";
     public static final String COMEDY = "comedy";
+    public static final String HISTORY = "history";
+    public static final String PASTORAL = "pastoral";
     // volume constants
     public static final int BASE_VOLUME_CREDIT_THRESHOLD = 30;
     public static final int COMEDY_EXTRA_VOLUME_FACTOR = 5;
