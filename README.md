@@ -1,3 +1,6 @@
+# Note: I forgot to complete Task 1.2 Git Log, instead reading over CheckStyle and committing my changes at a different pace.
+
+
 # Refactoring Mini Assignment
 
 [Martin Fowler](https://martinfowler.com) is an influential professional software engineer
