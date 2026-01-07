@@ -134,6 +134,6 @@ public class StatementPrinter {
 
     private String usd(int amountInCents) {
         final NumberFormat format = NumberFormat.getCurrencyInstance(Locale.US);
-        return format.format(amountInCents / (double) Constants.CENTS_PER_DOLLAR);
+        return format.format(amountInCents / (double) Constants.PERCENT_FACTOR);
     }
 }

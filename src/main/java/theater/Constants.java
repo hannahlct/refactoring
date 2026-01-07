@@ -29,7 +29,6 @@ public final class Constants {
     public static final int HISTORY_OVER_BASE_CAPACITY_PER_PERSON = 1000;
     public static final int HISTORY_AUDIENCE_THRESHOLD = 20;
     public static final int HISTORY_VOLUME_CREDIT_THRESHOLD = 20;
-    public static final int CENTS_PER_DOLLAR = 100;
     // pastoral constants
     public static final int PASTORAL_BASE_AMOUNT = 40000;
     public static final int PASTORAL_OVER_BASE_CAPACITY_PER_PERSON = 2500;
